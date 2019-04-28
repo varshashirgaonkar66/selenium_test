@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<parameter name="SIT" value="T2"></parameter>
+
+		<groups>
+			<run>
+				<include name="Sanity"></include>
+				<include name="Regression"></include>
+			</run>
+		
+		</groups>
+		<classes>
+
+			<class name="learningTestng.TestExample1"></class>
+			<class name="learningTestng.TestExample2"/>
+			<class name="learningTestng.TestExample3">
+			</class>
+
+
+		</classes>
+	</test> <!-- Test -->
+	<test name="Test2">
+		<classes>
+			<class name="learningTestng.TestExample2">
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Suite -->
+
